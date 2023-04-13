@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Title-->
+        <title>Our Solar System</title>
+        <!-- Meta -->
+        <meta charset="UTF-8">
+        <meta name="author" content="Erik Rhodin Claesson">
+        <meta name="description" content="Page about our solar system">
+        <meta name="keywords" content="solar system, planets, orbit">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Css Links -->
+        <link rel="stylesheet" href="../Css/AboutUs.css">
+        <link rel="stylesheet" href="../Css/StickyNavigation.css">
+        <link rel="stylesheet" href="../Css/ModalAndGallery.css">
+        <link rel="stylesheet" href="../Css/CustomScrollBar.css">
+        <link rel="stylesheet" href="../Css/TopNavigation.css">
+        <link rel="stylesheet" href="../Css/NavbarSmaller.css">
+        <link rel="stylesheet" href="../Css/GeneralStyle.css">
+        <link rel="stylesheet" href="../Css/ProgressBar.css"> 
+        <link rel="stylesheet" href="../Css/ModalCards.css">
+        <link rel="stylesheet" href="../Css/BackToTop.css">
+        <link rel="stylesheet" href="../Css/Socials.css">
+        <!-- Script Links -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <!-- Other Links -->
+        <link rel="icon" href="../Pictures/solar-system.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+        <div class="bgimg-1">
+            <div>
+                <!-- Top Header -->
+                <div class="header">
+                    <div class="social-icons">
+                        <a href="mailto:example@gmail.com" target="_blank" class="icon gmail"></a>
+                        <a href="https://twitter.com/example" target="_blank" class="icon twitter"></a>
+                        <a href="https://instagram.com/example" target="_blank" class="icon instagram"></a>
+                        <a href="https://youtube.com/channel/UCdXh9gKzDo6H_2q3oPW6Gzw" target="_blank" class="icon youtube"></a>
+                        <a href="https://linkedin.com/in/example" target="_blank" class="icon linkedin"></a>
+                    </div>
+                    <div class="topnavigation">
+                        <a href="Main.html">Home</a>
+                        <a href="AboutUs.html" class="active">About us</a>
+                        <a href="ContactUs.html">Contact</a>
+                    </div>
+                    <div class="TopLinks">
+                        <a href="Main.html">
+                            <img src="../Pictures/AstroLogo.png" width="75" height="75" alt="CompanyLogo">
+                        </a>
+                        <a href="AboutUs.html">
+                            <img src="../Pictures/TextLogo.png" width="175" height="75" alt="Astro">
+                        </a>
+                    </div>
+                </div>
+                <div class="caption3">
+                    <span class="border fade-in-text" style="background-color:transparent;color: #f7f7f7;transition: opacity 1.5s ease-in-out;">Welcome to Astro</span>
+                </div>
+            </div>
+        </div>
+        <nav>
+            <div style="list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;">
+                <div class="dropdown">
+                    <button onclick="toggleDropdown(this.id)" id="home" class="dropbtn">Home</button>
+                    <div id="home-dropdown" class="dropdown-content">
+                        <input type="text" placeholder="Search.." id="home-input" onkeyup="filterDropdown('home')">
+                        <a href="#about">About</a>
+                        <a href="#about">Hej</a>
+                        <a href="#about">åäöp</a>
+                        <a href="#about">322</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button onclick="toggleDropdown(this.id)" id="sun" class="dropbtn">Sun</button>
+                    <div id="sun-dropdown" class="dropdown-content">
+                        <input type="text" placeholder="Search.." id="sun-input" onkeyup="filterDropdown('sun')">
+                        <a href="#about">About</a>
+                    </div>
+                </div> 
+                <div class="dropdown">
+                    <button onclick="toggleDropdown(this.id)" id="mercury" class="dropbtn">Mercury</button>
+                    <div id="mercury-dropdown" class="dropdown-content">
+                        <input type="text" placeholder="Search.." id="mercury-input" onkeyup="filterDropdown('mercury')">
+                        <a href="#about">About</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button onclick="toggleDropdown(this.id)" id="venus" class="dropbtn">Venus</button>
+                    <div id="venus-dropdown" class="dropdown-content">
+                        <input type="text" placeholder="Search.." id="venus-input" onkeyup="filterDropdown('venus')">
+                        <a href="#about">About</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button onclick="toggleDropdown(this.id)" id="earth" class="dropbtn">Earth</button>
+                    <div id="earth-dropdown" class="dropdown-content">
+                        <input type="text" placeholder="Search.." id="earth-input" onkeyup="filterDropdown('earth')">
+                        <a href="Earth.html#Home">About</a>
+                        <a href="Earth.html#Introduction">Introduction</a>
+                        <a href="Earth.html#Size">Size</a>
+                        <a href="Earth.html#Location">Location</a>
+                        <a href="Earth.html#Atmosphere">Atmosphere</a>
+                        <a href="Earth.html#Orbit">Orbit</a>
+                        <a href="Earth.html#GravitationalPull">Gravitational Pull</a>
+                        <a href="Earth.html#Rotation">Rotation</a>
+                        <a href="Earth.html#Composition">Composition</a>
+                        <a href="Earth.html#History">History</a>
+                        <a href="Earth.html#Newsletter">Newsletter</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button onclick="toggleDropdown(this.id)" id="mars" class="dropbtn">Mars</button>
+                    <div id="mars-dropdown" class="dropdown-content">
+                        <input type="text" placeholder="Search.." id="mars-input" onkeyup="filterDropdown('mars')">
+                        <a href="#about">About</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button onclick="toggleDropdown(this.id)" id="jupiter" class="dropbtn">Jupiter</button>
+                    <div id="jupiter-dropdown" class="dropdown-content">
+                        <input type="text" placeholder="Search.." id="jupiter-input" onkeyup="filterDropdown('jupiter')">
+                        <a href="#about">About</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button onclick="toggleDropdown(this.id)" id="saturn" class="dropbtn">Saturn</button>
+                    <div id="saturn-dropdown" class="dropdown-content">
+                        <input type="text" placeholder="Search.." id="saturn-input" onkeyup="filterDropdown('saturn')">
+                        <a href="#about">About</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button onclick="toggleDropdown(this.id)" id="uranus" class="dropbtn">Uranus</button>
+                    <div id="uranus-dropdown" class="dropdown-content">
+                        <input type="text" placeholder="Search.." id="uranus-input" onkeyup="filterDropdown('uranus')">
+                        <a href="#about">About</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button onclick="toggleDropdown(this.id)" id="neptune" class="dropbtn">Neptune</button>
+                    <div id="neptune-dropdown" class="dropdown-content">
+                        <input type="text" placeholder="Search.." id="neptune-input" onkeyup="filterDropdown('neptune')">
+                        <a href="#about">About</a>
+                    </div>
+                </div>
+                <div class="dropdown split">
+                    <button onclick="toggleDropdown(this.id)" id="other" class="dropbtn">other</button>
+                    <div id="other-dropdown" class="dropdown-content">
+                        <input type="text" placeholder="Search.." id="other-input" onkeyup="filterDropdown('other')">
+                        <a href="AboutUs.html">About</a>
+                        <a href="ContactUs.html">Contact</a>
+                        <a href="Newsletter.html">Newsletter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="progress-container">
+                <div class="progress-bar" id="myBar"></div>
+            </div>  
+        </nav>
+        <div id="myNav-for-mobile" class="overlay-for-mobile">
+            <a href="javascript:void(0)" class="closebtn-for-mobile" onclick="closeNav()">&times;</a>
+            <div class="overlay-content-for-mobile">
+              <a href="Main.html">Home</a>
+              <a href="#">Sun</a>
+              <a href="#">Mercury</a>
+              <a href="#">Venus</a>
+              <a href="Earth.html">Earth</a>
+              <a href="#">Mars</a>
+              <a href="#">Jupiter</a>
+              <a href="#">Saturn</a>
+              <a href="#">Uranus</a>
+              <a href="#">Neptune</a>
+            </div>
+        </div>
+        <div id="navbut">
+            <span onclick="openNav()">open Navigation</span>
+        </div>
+        <div style="color: #777;background-color:black;text-align:center;text-align: justify;">
+            <div class="containerur">
+                <div class="left">
+                    <img src="../Pictures/AstroLogo.png" alt="Snow" style="width:100%;width:450px; transition: opacity 2s ease-in-out;" class="fade-in-text">
+                </div>
+                <div class="right">
+                    <h5 class="fade-in-text" style="transition: opacity 0.5s ease-in-out; text-align: center;">Astro</h5>
+                    <h2 class="fade-in-text" style="transition: opacity 1.5s ease-in-out;text-align: center;">About us</h2>
+                    <p class="fade-in-text" style="transition: opacity 2.5s ease-in-out;text-align: center; color: white;">Welcome to our space exploration company, dedicated to unlocking the secrets of our solar system. We are a team of passionate and skilled scientists, engineers, and explorers committed to advancing our understanding of the universe through research and analysis of the planets, moons, and other celestial bodies in our solar system. <br>
+                        <br> Our company specializes in the development and deployment of cutting-edge technologies that enable us to collect and analyze data from the far reaches of space. We design and launch probes and satellites to gather information about the composition, structure, and behavior of our neighboring planets and other celestial bodies.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="bgimg-2">
+            <div class="caption1">
+                <span class="border fade-in-text" style="background-color:transparent;color: #f7f7f7; transition: opacity 1.5s ease-in-out;">the wonders of space...</span>
+            </div>
+        </div>
+        <div style="position:relative;">
+            <div class="middleall">
+                <section class="profilemodal hidden" id="modal1">
+                    <div style="display: flex;">
+                        <button class="btn-close">⨉</button>
+                          <div class="card-container">
+                              <span class="pro">CFO</span>
+                              <img class="round" src="../Pictures/TeamMembers/Donkey_Face_(Salla).png" alt="user" width="128" height="128">
+                              <h3 style="color: white;">Salla-Lovis Schönewolf</h3>
+                              <h6>Salami</h6>
+                              <p>Je baise ta mère</p>
+                              <div class="skills">
+                                  <h6>Skills</h6>
+                                  <ul>
+                                      <li>Talking</li>
+                                      <li>Problemsolving</li>
+                                      <li>Cuddling</li>
+                                      <li>Sleeping</li>
+                                      <li>Space Game</li>
+                                      <li>Vegetarian</li>
+                                      <li>Your Mom</li>
+                                  </ul>
+                              </div>
+                          </div>
+                          <div class="card-container1">
+                              <div class="additional">
+                                  <div class="more-info">
+                                      <h1>Full Name</h1>
+                                      <div class="coords">
+                                          <span>Joined: 22 February 2022</span>
+                                      </div>
+                                      <div class="coords">
+                                          <span>Colmar, France</span>
+                                      </div>
+                                      <div class="coords">
+                                        <h3 style="margin-bottom: 0; color: white; letter-spacing: 4px;">Interests & Hobbies</h3>
+                                          <p style="margin-top: 0;">Dogs, Math, Art, Erik, your mom, Psychology, Phylosophy and Music</p>
+                                      </div>
+                                      <div class="stats">
+                                          <div>
+                                              <div class="title">Awards</div>
+                                              <div class="value">4</div>
+                                          </div>
+                                          <div>
+                                              <div class="title">Age</div>
+                                              <div class="value">16</div>
+                                          </div>
+                                          <div>
+                                              <div class="title">Years In Business</div>
+                                              <div class="value">10</div>
+                                          </div>
+                                          <div>
+                                              <div class="title">Club Mate</div>
+                                              <div class="value">420</div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="general">
+                                  <h1 style="margin-bottom:0;">Full Name</h1>
+                                  <h3 style="color: white; letter-spacing: 4px;">Education & Training</h3>
+                                  <p style="margin-top: 0;">middle school of maths and science, International baccaleureat diploma</p>
+                                  <h3 style="color: white; letter-spacing: 4px;">Skills & Expertise</h3>
+                                  <p style="margin-top: 0;">word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word</p>
+                                  <span class="more">Move the mouse over the card for more info</span>
+                              </div>
+                          </div>
+                      </div>
+                </section>
+                <section class="profilemodal hidden" id="modal2">
+                    <div style="display: flex;">
+                        <button class="btn-close">⨉</button>
+                          <div class="card-container">
+                              <span class="pro">CEO</span>
+                              <img class="round" src="../Pictures/TeamMembers/Shrek_Face_(Erik).png" alt="user" width="128" height="128">
+                              <h3 style="color: white;">Erik Rhodin<br>Claesson</h3>
+                              <h6>Swedish Fish</h6>
+                              <p>Ton chat ç'est Macron</p>
+                              <div class="skills">
+                                  <h6>Skills</h6>
+                                  <ul>
+                                      <li>HTML</li>
+                                      <li>CSS</li>
+                                      <li>Javascript</li>
+                                      <li>Python</li>
+                                      <li>C++</li>
+                                      <li>C#</li>
+                                      <li>Math</li>
+                                      <li>Physics</li>
+                                      <li>Multitasking</li>
+                                      <li>Music</li>
+                                  </ul>
+                              </div>
+                          </div>
+                          <div class="card-container1">
+                              <div class="additional">
+                                  <div class="more-info">
+                                      <h1>Erik Rhodin Claesson</h1>
+                                      <div class="coords">
+                                          <span>Joined: 6th July 2016</span>
+                                      </div>
+                                      <div class="coords">
+                                          <span>Portofino, Italy</span>
+                                      </div>
+                                      <div class="coords">
+                                        <h3 style="margin-bottom: 0; color: white; letter-spacing: 4px;">Interests & Hobbies</h3>
+                                            <p style="margin-top: 0;">I am passionate about creating websites and applications using HTML, CSS, JavaScript, Python, C++, and C#. Solving complex mathematical and physical problems drives my curiosity.
+                                            <br><br>
+                                            I love multitasking, juggling between my interests, and discovering new things. When I need to unwind, I turn to music, which relaxes and inspires me to create my own.</p>
+                                      </div>
+                                      <div class="stats">
+                                          <div>
+                                              <div class="title">Awards</div>
+                                              <div class="value">3</div>
+                                          </div>
+                                          <div>
+                                              <div class="title">Age</div>
+                                              <div class="value">27</div>
+                                          </div>
+                                          <div>
+                                              <div class="title">Years In Business</div>
+                                              <div class="value">6</div>
+                                          </div>
+                                          <div>
+                                              <div class="title">Emergy Drinks</div>
+                                              <div class="value infinity">∞</div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="general">
+                                  <h1 style="margin-bottom:0;">Erik Rhodin Claesson</h1>
+                                  <h3 style="color: white; letter-spacing: 4px;">Education & Training</h3>
+                                  <p style="margin-top: 0;">As CEO of Astro, education was vital in shaping his leadership. Earned a degree in Aerospace Engineering from MIT, followed by an MBA from Stanford. But it was his passion for space that drove him to gain further expertise, attending Space Studies Program at ISU. But it was his love for space that made him a true visionary.</p>
+                                  <h3 style="color: white; letter-spacing: 4px;">Skills & Expertise</h3>
+                                  <p style="margin-top: 0;">Astro's CEO, is well-versed in the technical aspects of space exploration. Erik's unique blend of technical and business expertise makes her the ideal leader for Astro as they continue to push the boundaries of space exploration.</p>
+                                  <span class="more">Move the mouse over the card for more info</span>
+                              </div>
+                          </div>
+                      </div>
+                </section>
+                <section class="profilemodal hidden" id="modal3">
+                    <div style="display: flex;">
+                        <button class="btn-close">⨉</button>
+                          <div class="card-container">
+                              <span class="pro">CTO</span>
+                              <img class="round" src="../Pictures/TeamMembers/Farquaad_Face_(Ari).png   " alt="user" width="128" height="128">
+                              <h3 style="color: white;">Ari Clement de Kokkonen</h3>
+                              <h6>French Baguette</h6>
+                              <p>I understand eigenvectors<br> better than relationships.</p>
+                              <div class="skills">
+                                  <h6>Skills</h6>
+                                  <ul>
+                                      <li>Depression</li>
+                                      <li>Sea of Thieves bilge/flex</li>
+                                      <li>French</li>
+                                      <li>Speaks with a French accent</li>
+                                      <li>Baguette</li>
+                                      <li>Hates Cheshire Grin</li>
+                                      <li>Good at German</li>
+                                      <li>Overthinking</li>
+                                      <li>Nerd</li>
+                                  </ul>
+                              </div>
+                          </div>
+                          <div class="card-container1">
+                              <div class="additional">
+                                  <div class="more-info">
+                                      <h1>Ari Clément de Kokkonen</h1>
+                                      <div class="coords">
+                                          <span>Joined: 31/02/1895</span>
+                                      </div>
+                                      <div class="coords">
+                                          <span>France, Paris</span>
+                                      </div>
+                                      <div class="coords">
+                                        <h3 style="margin-bottom: 0; color: white; letter-spacing: 4px;">Interests & Hobbies</h3>
+                                          <p style="margin-top: 0;">I am very interested in Sea of Thieves, a perfect game without any glitches.<br><br>I am also very interested in IT because nerd.</p>
+                                      </div>
+                                      <div class="stats">
+                                          <div>
+                                              <div class="title">LBH won</div>
+                                              <div class="value">0</div>
+                                          </div>
+                                          <div>
+                                              <div class="title">Age</div>
+                                              <div class="value">17</div>
+                                          </div>
+                                          <div>
+                                              <div class="title">Years In Business</div>
+                                              <div class="value">128</div>
+                                          </div>
+                                          <div>
+                                              <div class="title">Baguette</div>
+                                              <div class="value">69</div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="general">
+                                  <h1 style="margin-bottom:0;">Ari Clément de Kokkonen</h1>
+                                  <h3 style="color: white; letter-spacing: 4px;">Education & Training</h3>
+                                  <p style="margin-top: 0;">Graduated middle school</p>
+                                  <h3 style="color: white; letter-spacing: 4px;">Skills & Expertise</h3>
+                                  <p style="margin-top: 0;">I have many 6s in Etienne's classes and I am doing IB™.<br>Bachelor's degree in dumbfoolness as well as a PHD in Boarded Medical Doctor</p>
+                                  <span class="more">Move the mouse over the card for more info</span>
+                              </div>
+                          </div>
+                      </div>
+                </section>
+            </div>
+            <div class="overlay hidden"></div>
+            <div style="color:white;background-color:black;text-align:center;padding:50px 80px;text-align: justify; text-align: center;">
+                <h5 class="fade-in-text" style="transition: opacity 0.5s ease-in-out; text-align: center;">Founders</h5>
+                <h2 class="fade-in-text" style="transition: opacity 1.5s ease-in-out;text-align: center;">Our Team</h2>
+                <p class="fade-in-text" style="transition: opacity 2.5s ease-in-out;">With a deep respect for the mysteries and complexities of the universe, we approach our work with a sense of wonder and curiosity that drives us to push the boundaries of what is possible. Our team is committed to advancing scientific knowledge and making groundbreaking discoveries that contribute to a greater understanding of our place in the cosmos. At our core, we are driven by a belief in the power of exploration and discovery to unlock new opportunities and possibilities for humanity. Join us on this exciting journey as we continue to explore the vast expanse of our solar system and beyond. </p>
+                <div class="TopMemCard" style="display: flex;">
+                    <div class="card fade-in-text" style="transition: opacity 3.5s ease-in-out;">
+                        <img src="../Pictures/TeamMembers/Donkey_(Salla).png" alt="Avatar" style="width:100%"  class="btn btn-open" data-modal="modal1">
+                        <div class="container">
+                            <h4>
+                                <b>Salla-Lovis Schönewolf</b>
+                            </h4>
+                            <p>CTO</p>
+                        </div>
+                    </div>
+                    <div class="card fade-in-text" style="transition: opacity 4.5s ease-in-out;">
+                        <img src="../Pictures/TeamMembers/Shrek_(Erik).png" alt="Avatar" style="width: 100%;" class="btn btn-open" data-modal="modal2">
+                        <div class="container">
+                            <h4>
+                                <b>Erik Rhodin Claesson</b>
+                            </h4>
+                            <p>CEO</p>
+                        </div>
+                    </div>
+                    <div class="card fade-in-text" style="transition: opacity 5.5s ease-in-out;">
+                        <img src="../Pictures/TeamMembers/Farquaad_(Ari).png" alt="Avatar" style="width:100%"  class="btn btn-open" data-modal="modal3">
+                        <div class="container">
+                            <h4>
+                                <b>Ari Clement de Kokkonen</b>
+                            </h4>
+                            <p>CFO</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bgimg-3">
+            <div class="caption1">
+                <span class="border fade-in-text" style="background-color:transparent;color: #f7f7f7;transition: opacity 1.5s ease-in-out;">in The Beyond</span>
+            </div>
+        </div>
+        <div style="position:relative;">
+            <div style="color: white;background-color:black;text-align:center;padding:50px 80px;text-align: justify;">
+                <div class="flexingforgallery">
+                    <div class="container fade-in-text" style="transition: opacity 1.5s ease-in-out;">
+                        <div class="mySlides">
+                            <div class="numbertext">1 / 6</div>
+                            <img class="myImages" id="myImg" src="../Pictures/AboutUs/Gallery/MarsPlanet.jpg" alt="Info" alt="info" width="100%">
+                        </div>
+                        <div class="mySlides">
+                            <div class="numbertext">2 / 6</div>
+                            <img class="myImages" id="myImg" src="../Pictures/AboutUs/Gallery/WaterOnMars.jpg" alt="Info" width="100%">
+                        </div>
+                        <div class="mySlides">
+                            <div class="numbertext">3 / 6</div>
+                            <img class="myImages" id="myImg" src="../Pictures/AboutUs/Gallery/EuropaMoon.jpg" alt="Info" width="100%">
+                        </div>
+                        <div class="mySlides">
+                            <div class="numbertext">4 / 6</div>
+                            <img class="myImages" id="myImg" src="../Pictures/AboutUs/Gallery/EuropaUnderground.jpg" alt="Info" width="100%">
+                        </div>
+                        <div class="mySlides">
+                            <div class="numbertext">5 / 6</div>
+                            <img class="myImages" id="myImg" src="../Pictures/AboutUs/Gallery/EnceladusMoon.jpg" alt="Info" width="100%">
+                        </div>
+                        <div class="mySlides">
+                            <div class="numbertext">6 / 6</div>
+                            <img class="myImages" id="myImg" src="../Pictures/AboutUs/Gallery/EnceladusUnderground.jpg" alt="Info" width="100%">
+                        </div>
+                        <div id="myModal" class="modal">
+                            <span class="close">&times;</span>
+                            <img class="modal-content" id="img01">
+                            <div id="caption1"></div>
+                        </div>
+                        <a class="prev" onclick="plusSlides(-1)">❮</a>
+                        <a class="next" onclick="plusSlides(1)">❯</a>
+                        <div class="caption-container">
+                            <p id="caption"></p>
+                        </div>
+                        <div class="row">
+                            <div class="column">
+                                <img class="demo cursor" src="../Pictures/AboutUs/Gallery/MarsPlanet.jpg" style="width:100%" onclick="currentSlide(1)" alt="Displayed is a recent visual representation of the planet Mars, captured utilizing our advanced telescope, AstroVision. For an amplified view, kindly select the image.">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="../Pictures/AboutUs/Gallery/WaterOnMars.jpg" style="width:100%" onclick="currentSlide(2)" alt="Mars is rich in minerals that formed in water, and in some cases still hold water. Here is a water map of Mars">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="../Pictures/AboutUs/Gallery/EuropaMoon.jpg" style="width:100%" onclick="currentSlide(3)" alt="One of Jupiters moons called Europa">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="../Pictures/AboutUs/Gallery/EuropaUnderground.jpg" style="width:100%" onclick="currentSlide(4)" alt="On Jupiter's moon Europa, a saltwater ocean exists deep beneath a thick ice shell. The moon is potentially habitable">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="../Pictures/AboutUs/Gallery/EnceladusMoon.jpg" style="width:100%" onclick="currentSlide(5)" alt="One of Saturns moons called Enceladus">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="../Pictures/AboutUs/Gallery/EnceladusUnderground.jpg" style="width:100%" onclick="currentSlide(6)" alt="Enceladus harbors an ocean beneath its ice crust that erupts spectacular plumes from fissures at the south pole.">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sidetext">
+                        <h5 class="fade-in-text" style="transition: opacity 0.5s ease-in-out; text-align: center;">Expeditions</h5>
+                        <h2 class="fade-in-text" style="transition: opacity 1.5s ease-in-out;text-align: center;">Recent Findings</h2>
+                        <p class="fade-in-text" style="transition: opacity 2.5s ease-in-out;text-align: center; color: white;">Astro's dedication to space exploration has led the company to develop advanced technologies and techniques that allow them to gather a wealth of information about our solar system. Our team of scientists and engineers employ cutting-edge research methodologies to collect data, which they then analyze and interpret to uncover new insights about the cosmos.
+                        <br><br>    
+                        One of Astro's most significant recent discoveries is the presence of water on Mars, which has been a crucial piece of evidence in the search for extraterrestrial life. This finding has led to a renewed focus on Mars as a possible location for future human colonization efforts. Additionally, Astro's exploration efforts have revealed the existence of potentially habitable moons around Jupiter and Saturn, expanding our understanding of the possibility of life beyond Earth.
+                        <br><br>  
+                        Astro's dedication to sharing their latest findings with the public has made the company a major force in inspiring the next generation of space explorers and scientists. Through their stunning pictures and engaging presentations, Astro has been able to capture the imagination of people worldwide and generate widespread interest in space exploration and research.
+                        <br><br>
+                        As a leader in the field of space exploration, Astro continues to push the boundaries of what we know about our solar system and the universe beyond. Their ambitious vision and unwavering dedication to discovery are driving their continued success and ensuring that they remain at the forefront of space exploration and research.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="bgimg-4">
+            <div class="caption1">
+                <span class="border fade-in-text" style="background-color:transparent;color: #f7f7f7; transition: opacity 1.5s ease-in-out;">End of page!</span>
+            </div>
+        </div>
+        <script src="../Javascript/Gallery.js"></script>
+        <script src="../Javascript/Modal.js"></script>
+        <script src="../Javascript/BackToTop&ProgressBar.Js"></script>
+        <script src="../Javascript/Fade.js"></script>
+        <script src="../Javascript/ModalCards.js"></script>
+        <script src="../Javascript/StickyNavigation.js"></script>
+        <script src="../Javascript/SmallNav.js"></script>
+    </body>
+</html>
